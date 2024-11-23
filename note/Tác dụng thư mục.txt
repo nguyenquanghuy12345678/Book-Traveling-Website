@@ -1,0 +1,71 @@
+1. /assets:
+    Tác dụng: Chứa các tài nguyên tĩnh như hình ảnh, tệp CSS, JavaScript và phông chữ. Những tài nguyên này sẽ được sử dụng trực tiếp trong giao diện người dùng của website.
+    Các thư mục con:
+        /css: Chứa các tệp CSS dùng để định kiểu cho giao diện của trang web.
+        /images: Chứa các tệp hình ảnh như logo, banner, v.v.
+        /js: Chứa các tệp JavaScript dùng để xử lý các tương tác người dùng như hiệu ứng, validation, hoặc các tính năng động.
+        /fonts: Chứa các tệp phông chữ sử dụng trên website.
+2. /config:
+    Tác dụng: Chứa các tệp cấu hình hệ thống và ứng dụng, bao gồm cấu hình kết nối cơ sở dữ liệu, các thông số chung cho hệ thống, và cấu hình các route.
+    Các tệp:
+        config.php: Cấu hình các tham số kết nối cơ sở dữ liệu, cấu hình ứng dụng chung.
+        routes.php: Định nghĩa các route (đường dẫn) và controller mà ứng dụng sử dụng.
+3. /controllers:
+    Tác dụng: Chứa các controller là các lớp xử lý logic nghiệp vụ cho các trang web. Các controller này nhận yêu cầu từ người dùng, xử lý và trả lại kết quả cho view.
+    Các tệp:
+        HomeController.php: Controller cho trang chủ.
+        AdminController.php: Controller cho trang quản trị (admin).
+        ProductController.php: Controller cho các sản phẩm.
+4. /core:
+    Tác dụng: Chứa các lớp cơ sở, là phần khung (framework) của ứng dụng giúp các thành phần khác trong hệ thống giao tiếp với nhau.
+    Các tệp:
+        Database.php: Lớp kết nối cơ sở dữ liệu, chứa các phương thức truy vấn cơ sở dữ liệu.
+        Router.php: Lớp xử lý các yêu cầu routing, điều hướng yêu cầu đến đúng controller và action.
+5. /database:
+    Tác dụng: Chứa các tệp xử lý cơ sở dữ liệu, bao gồm các migration (thay đổi cấu trúc cơ sở dữ liệu) và dữ liệu mẫu.
+    Các thư mục con:
+        migrations: Các tệp SQL hoặc PHP để thay đổi cấu trúc cơ sở dữ liệu (ví dụ: tạo bảng, thay đổi schema).
+        seeds: Chứa các tệp dữ liệu mẫu để nạp vào cơ sở dữ liệu khi cần thiết (ví dụ: tạo dữ liệu thử nghiệm).
+6. /models:
+    Tác dụng: Chứa các lớp mô hình (model) đại diện cho các bảng trong cơ sở dữ liệu. Mỗi model liên kết với một bảng trong cơ sở dữ liệu và giúp quản lý dữ liệu.
+    Các tệp:
+        User.php: Model cho người dùng, tương tác với bảng người dùng trong cơ sở dữ liệu.
+        Product.php: Model cho sản phẩm.
+        Order.php: Model cho đơn hàng.
+7. /public:
+    Tác dụng: Là thư mục gốc chứa các tài nguyên công cộng của ứng dụng, như các tệp PHP xử lý yêu cầu từ người dùng và các tài nguyên tĩnh.
+    Các tệp:
+        index.php: Tệp PHP chính cho trang chủ.
+        about.php, contact.php: Các trang giới thiệu và liên hệ.
+        /uploads: Thư mục chứa các tệp tải lên từ người dùng (hình ảnh, tài liệu, v.v.).
+8. /resources:
+    Tác dụng: Chứa các tài nguyên khác của dự án, bao gồm các template cho giao diện người dùng và email.
+    Các thư mục con:
+        /views: Chứa các tệp giao diện (templates), nơi HTML được kết hợp với dữ liệu từ controller.
+        home.php: View cho trang chủ.
+        product.php: View cho trang sản phẩm.
+        admin.php: View cho trang quản trị.
+        /mail: Chứa các template email gửi cho người dùng, như email chào mừng.
+9. /routes:
+    Tác dụng: Chứa các tệp route định nghĩa đường dẫn (URLs) cho các trang web và liên kết chúng với các controller và phương thức tương ứng.
+    Các tệp:
+        web.php: Các route chính cho trang website.
+        admin.php: Các route dành riêng cho trang admin.
+10. /scripts:
+    Tác dụng: Chứa các tệp script để hỗ trợ quản lý dự án, như sao lưu cơ sở dữ liệu, triển khai ứng dụng, hoặc các công cụ tự động khác.
+    Các tệp:
+        deploy.sh: Script triển khai tự động ứng dụng lên server.
+11. /storage:
+    Tác dụng: Chứa các tệp tạm thời hoặc dữ liệu khác như cache, log, hoặc các tệp không cần thiết lưu trữ lâu dài.
+    Các thư mục con:
+        /cache: Lưu trữ cache tạm thời để tối ưu hóa hiệu suất.
+        /logs: Lưu trữ log để theo dõi các hoạt động hoặc lỗi của hệ thống.
+12. /tests:
+    Tác dụng: Chứa các tệp kiểm thử (tests) để kiểm tra tính đúng đắn của ứng dụng.
+    Các tệp:
+        UserTest.php: Kiểm thử model User.
+        ProductTest.php: Kiểm thử model Product.
+    Thư mục /admin và /client:
+        Bạn có thể thêm các thư mục /admin và /client trong thư mục /resources/views nếu bạn muốn phân chia rõ ràng giao diện giữa phần quản trị (admin) và người dùng (client). Đây sẽ là nơi bạn đặt các template riêng biệt cho mỗi loại người dùng.
+        /admin: Các template dành riêng cho giao diện quản trị viên (admin).
+        /client: Các template dành cho giao diện người dùng cuối.
