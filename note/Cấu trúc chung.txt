@@ -1,0 +1,72 @@
+/project_root
+│
+├── /assets                # Chứa tất cả các tài nguyên tĩnh (images, fonts, js, css, v.v.)
+│   ├── /css               # Chứa các tệp CSS
+│   │   ├── style.css      # Tệp CSS chính
+│   │   └── admin.css      # Tệp CSS dành riêng cho trang admin
+│   │
+│   ├── /images            # Chứa hình ảnh
+│   │   ├── logo.png       # Ví dụ về logo
+│   │   └── banner.jpg     # Ví dụ về ảnh banner
+│   │
+│   ├── /js                # Chứa các tệp JavaScript
+│   │   ├── main.js        # Tệp JS chính
+│   │   ├── admin.js       # Tệp JS dành riêng cho trang admin
+│   │   └── jquery.js      # Ví dụ về thư viện
+│   │
+│   └── /fonts             # Chứa các tệp font
+│
+├── /config                # Chứa các tệp cấu hình hệ thống
+│   ├── config.php         # Cấu hình kết nối cơ sở dữ liệu, cấu hình chung
+│   └── routes.php         # Cấu hình các routes hoặc controller
+│
+├── /controllers           # Chứa các controller xử lý logic cho các trang
+│   ├── HomeController.php # Controller cho trang chủ
+│   ├── AdminController.php # Controller cho trang admin
+│   └── ProductController.php # Controller cho sản phẩm
+│
+├── /core                  # Các lớp cơ sở (framework của bạn nếu có)
+│   ├── Database.php       # Lớp kết nối cơ sở dữ liệu
+│   └── Router.php         # Lớp xử lý các yêu cầu routing
+│
+├── /database              # Các tệp xử lý cơ sở dữ liệu
+│   ├── migrations         # Các migration cơ sở dữ liệu nếu sử dụng (các bảng, thay đổi schema)
+│   │   ├── create_users_table.php
+│   │   └── create_products_table.php
+│   └── seeds              # Các tệp dữ liệu mẫu để nạp vào cơ sở dữ liệu
+│
+├── /models                # Các lớp model đại diện cho các bảng cơ sở dữ liệu
+│   ├── User.php           # Model người dùng
+│   ├── Product.php        # Model sản phẩm
+│   └── Order.php          # Model đơn hàng
+│
+├── /public                # Các tài nguyên công cộng (web root)
+│   ├── index.php          # Tệp index chính
+│   ├── about.php          # Trang Giới thiệu
+│   ├── contact.php        # Trang liên hệ
+│   └── /uploads           # Chứa các tệp tải lên từ người dùng (ảnh, tài liệu, v.v.)
+│
+├── /resources             # Các tài nguyên dùng cho dự án (template, email, v.v.)
+│   ├── /views             # Các tệp giao diện (templates)
+│   │   ├── home.php       # View cho trang chủ
+│   │   ├── product.php    # View cho trang sản phẩm
+│   │   └── admin.php      # View cho trang admin
+|   |    
+│   │   có thể thêm /admin /client
+│   └── /mail              # Các template email
+│       └── welcome_email.php # Mẫu email chào mừng
+│
+├── /routes                # Các tệp route định nghĩa đường dẫn cho trang web
+│   ├── web.php            # Các route chính cho website
+│   └── admin.php          # Các route cho trang admin
+│
+├── /scripts               # Các tệp script giúp hỗ trợ quản lý dự án (ví dụ: backup DB, deploy)
+│   └── deploy.sh          # Script triển khai tự động
+│
+├── /storage               # Các tệp tạm thời, cache hoặc các dữ liệu khác
+│   ├── /cache             # Cache tạm thời
+│   └── /logs              # Lưu trữ log (thông báo lỗi, thông tin hệ thống)
+│
+└── /tests                 # Các tệp kiểm thử (unit tests, integration tests)
+    ├── UserTest.php       # Kiểm thử model User
+    └── ProductTest.php    # Kiểm thử model Product
